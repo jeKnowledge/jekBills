@@ -1,0 +1,208 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.logo {
+    margin: 0 auto;
+    text-align: center;
+    height: 260px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+h1 {
+    position: absolute;
+    right: 30px;
+    top: 230px;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    line-height: 1.4em;
+    color: #1690C3;
+}
+
+.username {
+    color: #1690C3;
+}
+
+body
+{
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  /* make it look decent enough */
+  background-image: url(diam.jpg);
+  color: #333;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+header {
+    /*background-color: #333;*/
+    margin: 0px;
+    height: 300px;
+    width: 100%;
+    background-image: url(diamb.jpg);
+}
+
+.navbar {
+    margin-left: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #BCD;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "MyKievit", Arial, sans-serif;
+    width: 200px;
+}
+
+.topnav a:hover {
+    background-color: #BCD;
+    color: #333;
+    transition: 0.4s;
+}
+
+.topnav a.active {
+    background-color: #333;
+    color: white;
+}
+
+.b3 {
+    width: 100%;
+}
+
+.foot {
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    padding: 1rem;
+    background-color: #333;
+    text-align: center;
+    color: #1690C3;
+    font-family: "MyKievit", Arial, sans-serif;
+}
+
+.profile-img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profileImage {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#profile-btn {
+    margin: 20px 20px;
+}
+
+.registo-title {
+    color: #1690C3;
+    font-size: 35px;
+    margin: 0px 0px;
+    padding-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.meta {
+    color: #333;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.descr-registo {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.main-content {
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.registo {
+    border: 3px solid #333;
+    background-color: #DEDEDF;
+    margin: 20px 22% 20px 22%;
+}
+
+.registoP {
+    border: 3px solid #DEF;
+    color: #BCD;
+    margin: 20px 22% 20px 22%;
+    background-color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.registoForm {
+    width: 50%;
+}
+
+#nomeRegisto {
+    height: 50px;
+    font-size: 20px;
+}
+
+#descRegisto {
+    height: 50px;
+    font-size: 14px;
+}
+
+.form-signin {
+    width: 25%;
+}
+
+.form-signup {
+    width: 25%;
+}
+
+.b3login {
+    width: 100%;
+    position-top: 350;
+}
+
+.padded {
+    font-size: 14px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 500px auto;
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+.grid-container>div {
+    text-align: center;
+    padding:20px 0;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}

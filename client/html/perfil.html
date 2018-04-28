@@ -1,0 +1,84 @@
+<template name="perfil">
+    {{> optionsbar}}
+    <div id="profile-wrap">
+
+        <center>
+
+            {{#with UserImage}}
+            <img src="{{image}}" class="profile-img">
+            {{else}}
+            <img src="milton.jpg" class="profile-img">
+
+            {{/with}}
+            <form class="edit-profile" enctype="multipart/form-data">
+                <label for="profileImage"><i class="glyphicon glyphicon-picture"></i> Alterar foto de perfil</label>
+                <span id="filename"></span>
+                <input type="file" name="profileImage" id="profileImage" class="black profileImage">
+                <button type="submit" value="Upload Photo" id="profile-btn" class="btn btn-sml btn-primary">Carregar foto</button>
+            </form>
+
+            <h2 class="username"><strong>{{username}}</strong></h2>
+            <h3 class="email">{{email}}</h3>
+
+            <br>
+            <h2><strong>Registos adicionados por ti:</strong></h2>
+            {{#each userRegistos}}
+            <div class="registo">
+                <div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+                    <div>
+                        <span class="registo-title">{{nomeRegisto}}</span>
+                        <br>
+                    </div>
+                    <div>
+                        <span class="registo-title">{{Registo}}</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="meta">Projeto: {{projeto}}</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="meta">Autor: {{autor}}</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="meta">Data: {{date}}</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="meta">Descrição:</span>
+                        <br>
+                        <span class="descr-registo">{{descRegisto}}</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="meta">Entidade: {{entidade}}</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="meta">Valor: {{valRegisto}}</span>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <h3>Ainda não adicionaste nenhum registo!</h3>
+            {{/each}}
+
+        </center>
+    </div>
+
+
+<!--
+<script type="text/javascript">
+    $(function() {
+        $("profileImage:file").change(function() {
+            var filename = $(this).val();
+            $("span").text(file);
+            $("label").hide(); //not working
+        });
+    });
+
+</script>
+-->
+
+</template>

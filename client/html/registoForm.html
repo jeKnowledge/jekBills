@@ -1,0 +1,34 @@
+<template name="registoForm">
+    <div id="registoForm">
+        <center>
+            <form class="registoForm">
+                <h2 class="registoForm-heading">Adicionar Registo</h2>
+                <label for="nomeRegisto" class="sr-only">Nome do Registo</label>
+                <input type="text" name="" id="nomeRegisto" class="form-control" placeholder="Nome do Registo" required>
+                <br>
+                <label for="descRegisto" class="sr-only">Descrição do Registo</label>
+                <input type="text" name="" id="descRegisto" class="form-control" placeholder="Descrição do Registo">
+                <br>
+                <label for="valRegisto" class="sr-only">Descrição do Registo</label>
+                <input type="number" name="" id="valRegisto" class="form-control" placeholder="Valor (Positivo para entrada; Negativo para saída)">
+                <br>
+                <label for="projeto" class="sr-only">Projeto</label>
+                <input type="text" name="" id="projeto" class="form-control" placeholder="Projeto">
+                <br>
+                <label for="entidade" class="sr-only">Entidade</label>
+                <input type="text" name="" id="entidade" class="form-control" placeholder="Entidade">
+                <br>
+                <label for="dataRegisto" class="sr-only">Data:</label>
+                <input type="date" name="" id="dataRegisto" class="form-control">
+                <br>
+                <!-- UPLOAD DE FOTO!!! -->
+                <label for="imagemRegisto"><i class="glyphicon glyphicon-picture"></i> Importar imagem:</label>
+                <span id="filename"></span>
+                <input type="file" name="" id="imagemRegisto" class="black imagemRegisto">
+                <!-- # -->
+                <br>
+                <button type="submit" id="registo-btn" class="btn btn-lg btn-success btn block">Registar</button>
+            </form>
+        </center>
+    </div>
+</template>

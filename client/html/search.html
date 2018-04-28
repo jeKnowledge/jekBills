@@ -1,0 +1,99 @@
+<template name="search">
+    {{> optionsbar}}
+    <center>
+        <!-- search -->
+        <div id="search-wrap">
+            <!-- Easy Search -->
+            <div class="black searchbar">
+                {{> EasySearch.Input index=index attributes=inputAttributes }}
+
+                {{#EasySearch.IfInputEmpty index=index }}
+                    <div class="padded examples black">Exemplo: "jeKbills"</div>
+                {{else}}
+                    {{#if resultsCount}}
+                        <div class="padded count-results black">{{resultsCount}} Resultados encontrados</div>
+                    {{/if}}
+                {{/EasySearch.IfInputEmpty}}
+
+                {{#EasySearch.IfSearching index=index }}
+                    <div>Searching</div>
+                {{/EasySearch.IfSearching}}
+
+                <ol class="">
+                    {{#EasySearch.Each index =index }}
+                        {{> User}}
+                    {{/EasySearch.Each}}
+                </ol>
+
+                {{#EasySearch.IfNoResults index=index }}
+                    <div class="padded no-results black">Sem resultados!</div>
+                {{else}}
+                {{/EasySearch.IfNoResults}}
+
+                {{> EasySearch.Pagination index=index maxPages=10 }}
+                {{! > EasySearch.LoadMore index=index }}
+
+                {{#if showMore}}
+                    {{> EasySearch.Input name="mini-index" index=index attributes=inputAttributes }}
+                    <ul>
+                        {{#EasySearch.Each name="mini-index" index=index }}
+                            <li>{{name}}</li>
+                        {{/EasySearch.Each}}
+                    </ul>
+                {{/if}}
+            </div>
+            <!-- Easy Search -->
+        </div>
+        <!-- end search -->
+    </center>
+</template>
+
+
+<template name="User">
+    <ol class="user black {{selected}}" id="user-link">
+        <div class="grid-container">
+            <div class="registoP">
+                <span>{{nomeRegisto}}</span>
+            </div>
+        </div>
+        {{#if selected}}
+        <div class="registo">
+            <div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+                <div>
+                    <span class="registo-title">{{nomeRegisto}}</span>
+                    <br>
+                </div>
+                <div>
+                    <span class="registo-title">{{Registo}}</span>
+                </div>
+                <br>
+                <div>
+                    <span class="meta">Projeto: {{projeto}}</span>
+                </div>
+                <br>
+                <div>
+                    <span class="meta">Autor: {{autor}}</span>
+                </div>
+                <br>
+                <div>
+                    <span class="meta">Data: {{date}}</span>
+                </div>
+                <br>
+                <div>
+                    <span class="meta">Descrição:</span>
+                    <br>
+                    <span class="descr-registo">{{descRegisto}}</span>
+                </div>
+                <br>
+                <div>
+                    <span class="meta">Entidade: {{entidade}}</span>
+                </div>
+                <br>
+                <div>
+                    <span class="meta">Valor: {{valRegisto}}</span>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </ol>
+</template>

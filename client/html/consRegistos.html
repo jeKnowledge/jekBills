@@ -1,0 +1,19 @@
+<template name="consRegistos">
+    {{> optionsbar}}
+    <center>
+        {{#each consRegistos}}
+        <div class="registo">
+            <div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+                <h2 class="registo-title">{{nomeRegisto}}</h2>
+                <p class="meta">Projeto: {{projeto}}</p>
+                <p class="meta">Autor: {{autor}}</p>
+                <p class="meta">Data: {{date}}</p>
+                <p class="meta">Descrição:</p>
+                <p class="descr-registo">{{descRegisto}}</p>
+            </div>
+        </div>
+        {{else}}
+            <h2>Não existem registos!</h2>
+        {{/each}}
+    </center>
+</template>

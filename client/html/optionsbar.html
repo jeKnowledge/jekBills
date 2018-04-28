@@ -1,0 +1,33 @@
+<template name="optionsbar">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <div class="navbar navbar-dark bg-dark" id="navbar">
+        <a class="perfil" href="/perfil" id="perfil-link"><i class="glyphicon glyphicon-user"></i> Perfil</a>
+        <a class="addRegisto" href="/addRegisto" id="addRegisto-link"><i class="glyphicon glyphicon-plus-sign"></i> Adicionar Registo</a>
+        <a class="consRegistos" href="/consRegistos" id="consRegistos-link"><i class="glyphicon glyphicon-book"></i> Consultar Registos</a>
+        <a class="search" href="/search" id="search-link"><i class="glyphicon glyphicon-book"></i> Consultar Registos</a>
+        <a class="logout" href="/logout" id="logout-link"><i class="fa fa-sign-out"></i> Logout</a>
+    </div>
+class="navbar navbar-dark bg-dark"
+-->
+    <nav role="navigation">
+      <div id="menuToggle">
+
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+            <a class="perfil" href="/perfil" id="perfil-link"><li><i class="glyphicon glyphicon-user"></i> Perfil</li></a>
+            <a class="addRegisto" href="/addRegisto" id="addRegisto-link"><li><i class="glyphicon glyphicon-plus-sign"></i> Adicionar Registo</li></a>
+            <!--<a class="consRegistos" href="/consRegistos" id="consRegistos-link"><i class="glyphicon glyphicon-book"></i> Consultar Registos</a>-->
+            <a class="search" href="/search" id="search-link"><li><i class="glyphicon glyphicon-book"></i> Consultar Registos</li></a>
+            <a class="stats" href="/stats" id="stats-link"><li><i class="glyphicon glyphicon-stats"></i> Estatísticas</li></a>
+            <a class="contacts" href="/contacts" id="contacts-link"><li><i class="glyphicon glyphicon-earphone"></i> Contactos</li></a>
+            <a href="http://jeknowledge.pt" target="_blank"><li><i class="glyphicon glyphicon-heart"></i> jeKnowledge.pt/</li></a>
+            <a class="logout" href="/logout" id="logout-link"><li><i class="fa fa-sign-out"></i> Logout</li></a>
+        </ul>
+      </div>
+    </nav>
+</template>
